@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 class Shiur2 {
     public static void f1() {
         int i, sum = 0, memoza = 0;
@@ -45,6 +46,7 @@ class Shiur2 {
         }
 
     }
+    
     public static void f4(String str) {
         int len = str.length();
         int letter = 0;
@@ -196,6 +198,98 @@ class Shiur2 {
     	 }
     System.out.println("total amount"+maskanta); 
     }
+    public static int f15(int Num) {
+      int sum = 0;
+         while (Num > 0) {
+            sum += Num % 10;
+            Num /= 10;
+          }
+         return sum;
+      }
+    public static void f16(double a1 ,double p) {
+    	double n=1;
+    	for (int i=0; i<=10;i++)
+    	{
+    		double p1=Math.pow(p,n-1);
+    		double an=a1*p1;
+    		System.out.println(an);
+    		n++;
+    	}
+    }
+    public static void f17() {
+    	int min_x=100;
+    	int min_y=0;
+    	for (int i=0; i<=5;i++)
+    	{
+    	int x;
+    	Random r=new Random();
+    	x=r.nextInt(101);
+    	int y;
+    	Random r1=new Random();
+    	y=r.nextInt(101);
+    	System.out.println("("+x+","+y+")");
+    	if (x<min_x)
+    	{
+    		x=min_x;
+    		y=min_y;
+    	}
+    System.out.println("("+min_x+","+min_y+")");
+    }
+    }
+    public static void f18() {
+    	int max_math=100;
+    	int max_english=100;
+    	int max_memoza=100;
+    	String name_math="noa";
+    	String name_english="noa";
+    	String name_memoza="noa";
+    	for (int i=0; i<=3;i++)	 
+    	{
+    		Scanner scan = new Scanner(System.in);
+    		System.out.println("enter your name");
+            String str1 = scan.nextLine();
+            System.out.println("Enter your grade math");
+    	    int math = scan.nextInt();
+    	    System.out.println("Enter your grade english");
+    	    int english = scan.nextInt();
+    	    int memoza=math+english;
+            if (math<max_math)
+            {
+            	max_math=math;
+            	name_math=str1;
+            }
+            if (english<max_english)
+            {
+            	max_english=english;
+            	name_english=str1;
+            }
+            if (memoza<max_memoza)
+            {
+            	max_memoza=memoza;
+            	name_memoza=str1;
+            }
+            
+    	}
+    }
+    public static void f19(int num) {
+    	int modoul=0;
+    	int num_modoul=0;
+    	int sum_num=0;
+    	do 
+    	{
+    	num_modoul=num%10;
+    	modoul=num_modoul;
+    	sum_num++;
+    	}
+    	while (modoul!=0);
+    	{
+    		num_modoul=num%10;
+    		modoul=num_modoul;
+    		sum_num++;
+    	}
+    System.out.println(sum_num);
+    }
+    
     public static void main(String[] args) {
     	f1();
         f2();
@@ -211,5 +305,11 @@ class Shiur2 {
         f12(2,5);
         f13(5);
         f14(50,3);
+        f15(12345);
+        f16(4,5);
+        f17();
+        f18();
+        f19(2765);
     }
 }
+את תרגיל 17 אמרת שתשלח לנו תשובה
